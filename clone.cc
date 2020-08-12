@@ -16,11 +16,11 @@ int main() {
 
   error = git_clone(&repo, "https://github.com/whs-dot-hk/ansible-fedora-32.git", "test", &clone_opts);
   if (error != 0) {
-		const git_error *err = git_error_last();
-		if (err) {
+    const git_error *err = git_error_last();
+    if (err) {
       printf("ERROR %d: %s\n", err->klass, err->message);
     }
-	}
+  }
 
   git_repository_free(repo);
 
