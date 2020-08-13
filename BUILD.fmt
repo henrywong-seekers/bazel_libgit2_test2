@@ -6,12 +6,13 @@ filegroup(
 )
 
 cmake_external(
-  name = "libgit2",
-  cache_entries = {
-    "REGEX_BACKEND": "builtin",
-  },
+  name = "fmt",
+#  cache_entries = {
+#    "BUILD_SHARED_LIBS": "TRUE",
+#  },
   lib_source = ":all",
   out_lib_dir = "lib64",
-  shared_libraries = ["libgit2.so.1.0"],
+  static_libraries = ["libfmt.a"],
+#  shared_libraries = ["libfmt.so.7"],
   visibility = ["//visibility:public"],
 )
